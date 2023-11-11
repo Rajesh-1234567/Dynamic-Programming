@@ -1,20 +1,20 @@
 public class climbStairs {
     public static int waysByRecursion(int n){
-        if(n==0) return 1;
+        if(n==0) return 1;                           // BY RECURSION ONLY
         if(n<0) return 0; // there is no negative stairs
         return waysByRecursion(n-1)+waysByRecursion(n-2);
     }
     public static int waysByMemonization(int dp[],int n){
         if(n==0) return 1;
         if(n<0) return 0; 
-        if(dp[n]!=0) return dp[n];
+        if(dp[n]!=0) return dp[n];                       // BY MEMONIZATATION AND RECURSION
         return waysByMemonization(dp,n-1)+waysByMemonization(dp,n-2);
     }
     public static int waysByTabulation(int dp[],int n){
         for(int i=2;i<n+1;i++){
             dp[i]=dp[i-1]+dp[i-2];
         } 
-        return dp[n];
+        return dp[n];                                   // BY TABULATATION
     }
     public static void main(String args[]){
         int n=5; // n steps to go
