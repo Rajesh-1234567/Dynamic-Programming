@@ -32,4 +32,5 @@ public class climbStairs {
         ans= waysByTabulation(dp,n);
         System.out.println(ans);
     }
+    
 }
