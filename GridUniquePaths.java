@@ -19,7 +19,7 @@ public class GridUniquePaths {
         int up = find(i, j - 1, dp);
         return dp[i][j] = left + up;
     }
-// TABULATION --------------------------------------------------------------------------------------------
+// TABULATION ----------------------------------------------------------------------------------------------
     public static int tabulation(int m, int n) {
         int[][] dp = new int[m][n];
         for (int i = 0; i < m; i++) {
